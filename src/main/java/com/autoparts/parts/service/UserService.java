@@ -1,5 +1,6 @@
 package com.autoparts.parts.service;
 
+import com.autoparts.parts.domain.UserDTO;
 import com.autoparts.parts.entity.UserEntity;
 import org.springframework.stereotype.Service;
 
@@ -8,11 +9,13 @@ import java.util.List;
 
 public interface UserService {
 
-    void addUser(UserEntity user);
+    void addUser(UserDTO user);
 
-    List<UserEntity> findAllUsers();
+    List<UserDTO> findAllUsers();
 
-    UserEntity findUserById(Long id);
+    UserDTO findUserById(Long id);
 
-    UserEntity updateUser(Long id, UserEntity userBeforeUpdate);
+    void updateUser(UserDTO userBeforeUpdate);
+
+    UserEntity DTOToEntityMapper(UserDTO userDTO);
 }

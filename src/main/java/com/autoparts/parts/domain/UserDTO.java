@@ -1,4 +1,4 @@
-package com.autoparts.parts.entity;
+package com.autoparts.parts.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,37 +6,32 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+public class UserDTO {
 
+    private Long id;
 
-@Entity
-@Table(name = "users")
-public class UserEntity extends BaseEntity {
-
-    @Column(name = "first_name",nullable = false, length = 75)
+    @Column(name = "first_name",nullable = false, length = 50)
     private String firstName;
 
-    @Column(name = "last_name",nullable = false, length = 75)
+    @Column(name = "last_name",nullable = false, length = 50)
     private String lastName;
 
     @Column(name = "telephone_number", length = 10)
     private Long telephoneNumber;
 
     @Column(nullable = false, unique = true , length = 150)
+    @Email
     private String email;
-
-    @Column(unique = true, length = 40)
-    private String login;
 
     @Column(nullable = false)
     private String sexType;
 
-
     private String password;
+    private String passwordConfirm;
 }
