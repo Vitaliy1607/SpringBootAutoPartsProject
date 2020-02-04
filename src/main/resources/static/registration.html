@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Users List</h1>
+    <form id="addUserForm">
+        <div class="form-group">
+            <label for="">Name:</label>
+            <input type="text" id="userName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Surname:</label>
+            <input type="text" id="userSurname" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Telephone Number:</label>
+            <input type="text" id="telephoneNumber" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Email:</label>
+            <input type="text" id="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Login:</label>
+            <input type="text" id="login" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Password:</label>
+            <input type="password" id="userPassword" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Confirm Password:</label>
+            <input type="password" id="userPasswordConfirm" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Sex:</label>
+            <select id="userSexType" class="form-control">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <button type="button" id="btnRegister" class="btn btn-success">Register</button>
+    </form>
+
+    <table class="table" id="usersTable">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Sex</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/registration.js"></script>
+</body>
+</html>
